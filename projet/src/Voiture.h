@@ -14,7 +14,7 @@ class Voiture {
 public:
 	Voiture();
 	virtual ~Voiture();
-	int virtual vitesse;
+	int vitesse;
 };
 
 } /* namespace std */
