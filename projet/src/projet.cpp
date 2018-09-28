@@ -7,9 +7,15 @@
 //============================================================================
 
 #include <iostream>
+#include "courte.h"
+#include "longue.h"
+#include "moyenne.h"
 using namespace std;
 
 int main() {
 	cout << "!!!Hello World!!!" << endl;
+	courte piste1;
+	moyenne piste2;
+	longue piste3;
 	return 0;
 }
