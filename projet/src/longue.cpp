@@ -16,6 +16,7 @@ longue::longue() {
 	Sport sport;
 	listeVoiture.assign(2, sedan);
 	listeVoiture.assign(1, sport);
+	nom = "longue";
 }
 
 longue::~longue() {

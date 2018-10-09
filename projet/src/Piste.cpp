@@ -6,11 +6,12 @@
  */
 
 #include "Piste.h"
-
+#include "sstream"
 namespace std {
 
 Piste::Piste() {
 	longueur = 100;
+	nom = "piste";
 }
 
 Piste::~Piste() {

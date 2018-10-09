@@ -13,6 +13,7 @@ namespace std {
 moyenne::moyenne() {
 	Sedan sedan;
 	listeVoiture.assign(3, sedan);
+	nom = "moyenne";
 }
 
 moyenne::~moyenne() {

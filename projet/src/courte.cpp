@@ -12,6 +12,7 @@ namespace std {
 courte::courte() {
 	Familiale familliale;
 	listeVoiture.assign(3, familliale);
+	nom = "courte";
 }
 
 courte::~courte() {

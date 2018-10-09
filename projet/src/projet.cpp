@@ -10,7 +10,7 @@
 #include "courte.h"
 #include "longue.h"
 #include "moyenne.h"
-#include "Sedan.h";
+#include "Sedan.h"
 using namespace std;
 
 int main() {
@@ -19,7 +19,7 @@ int main() {
 	moyenne piste2;
 	longue piste3;
 	Sedan* voiture = new Sedan();
-
 	cout << voiture->exporter()<<endl;
+	delete voiture;
 	return 0;
 }

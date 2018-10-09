@@ -18,6 +18,7 @@ public:
 	virtual ~Piste();
 	int longueur;
 	list<Voiture> listeVoiture;
+	string nom;
 };
 
 } /* namespace std */
