@@ -11,7 +11,7 @@ namespace std {
 
 Familiale::Familiale() {
 	vitesse = 60;
-
+	nom = "familiale";
 }
 
 Familiale::~Familiale() {

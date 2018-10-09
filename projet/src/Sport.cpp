@@ -11,7 +11,7 @@ namespace std {
 
 Sport::Sport() {
 	vitesse = 250;
-
+	nom = "sport";
 }
 
 Sport::~Sport() {

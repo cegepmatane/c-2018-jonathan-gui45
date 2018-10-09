@@ -11,7 +11,7 @@ namespace std {
 
 Sedan::Sedan() {
 	vitesse = 120;
-
+	nom = "sedan";
 }
 
 Sedan::~Sedan() {
