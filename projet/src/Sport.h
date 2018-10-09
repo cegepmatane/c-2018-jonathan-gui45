@@ -14,6 +14,7 @@ class Sport : public Voiture{
 public:
 	Sport();
 	virtual ~Sport();
+	string exporter();
 };
 
 } /* namespace std */

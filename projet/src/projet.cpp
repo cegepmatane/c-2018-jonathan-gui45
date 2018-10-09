@@ -10,6 +10,7 @@
 #include "courte.h"
 #include "longue.h"
 #include "moyenne.h"
+#include "Sedan.h";
 using namespace std;
 
 int main() {
@@ -17,5 +18,8 @@ int main() {
 	courte piste1;
 	moyenne piste2;
 	longue piste3;
+	Sedan* voiture = new Sedan();
+
+	cout << voiture->exporter()<<endl;
 	return 0;
 }

@@ -6,7 +6,7 @@
  */
 
 #include "Familiale.h"
-
+#include "sstream"
 namespace std {
 
 Familiale::Familiale() {
@@ -17,5 +17,10 @@ Familiale::Familiale() {
 Familiale::~Familiale() {
 	// TODO Auto-generated destructor stub
 }
-
+string Familiale::exporter(){
+	stringstream xml;
+	xml << "<familiale><nom>" << nom << "</nom>";
+	xml << "<vitesse>" << vitesse << "</familiale>";
+	return xml.str();
+}
 } /* namespace std */

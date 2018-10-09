@@ -14,6 +14,7 @@ class Sedan  : public Voiture{
 public:
 	Sedan();
 	virtual ~Sedan();
+	string exporter();
 };
 
 } /* namespace std */

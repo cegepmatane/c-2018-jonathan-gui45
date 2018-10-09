@@ -14,6 +14,7 @@ class Familiale : public Voiture{
 public:
 	Familiale();
 	virtual ~Familiale();
+	string exporter();
 };
 
 } /* namespace std */

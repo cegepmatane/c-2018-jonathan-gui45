@@ -14,7 +14,7 @@ class Voiture {
 public:
 	Voiture();
 	virtual ~Voiture();
-	virtual void exporter();
+	virtual string exporter();
 	int vitesse;
 	string nom;
 };
