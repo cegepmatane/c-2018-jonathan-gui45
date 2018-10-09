@@ -14,6 +14,7 @@ class moyenne  : public Piste{
 public:
 	moyenne();
 	virtual ~moyenne();
+	string exporter();
 };
 
 } /* namespace std */

@@ -14,6 +14,7 @@ class courte  : public Piste{
 public:
 	courte();
 	virtual ~courte();
+	string exporter();
 };
 
 } /* namespace std */

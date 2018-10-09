@@ -8,6 +8,7 @@
 #include "moyenne.h"
 #include "Sedan.h"
 #include "Sport.h"
+#include "sstream"
 namespace std {
 
 moyenne::moyenne() {
@@ -19,5 +20,15 @@ moyenne::moyenne() {
 moyenne::~moyenne() {
 	// TODO Auto-generated destructor stub
 }
-
+string moyenne::exporter(){
+	stringstream xml;
+	xml << "<moyenne><nom>" << nom << "</nom>";
+	xml << "<longueur>" << longueur << "</longueur>";
+	xml << "<listeVoitures>";
+	for(Voiture voiture : listeVoiture){
+		xml << voiture.exporter();
+	}
+	xml << "</listeVoitures></moyenne>";
+	return xml.str();
+}
 } /* namespace std */

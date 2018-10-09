@@ -15,6 +15,7 @@ class longue : public Piste{
 public:
 	longue();
 	virtual ~longue();
+	string exporter();
 };
 
 } /* namespace std */

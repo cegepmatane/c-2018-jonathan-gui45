@@ -19,6 +19,7 @@ public:
 	int longueur;
 	list<Voiture> listeVoiture;
 	string nom;
+	virtual string exporter();
 };
 
 } /* namespace std */

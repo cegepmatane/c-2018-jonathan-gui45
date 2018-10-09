@@ -8,6 +8,7 @@
 #include "longue.h"
 #include "Sedan.h"
 #include "Sport.h"
+#include "sstream"
 namespace std {
 
 longue::longue() {
@@ -22,5 +23,15 @@ longue::longue() {
 longue::~longue() {
 	// TODO Auto-generated destructor stub
 }
-
+string longue::exporter(){
+	stringstream xml;
+	xml << "<longue><nom>" << nom << "</nom>";
+	xml << "<longueur>" << longueur << "</longueur>";
+	xml << "<listeVoitures>";
+	for(Voiture voiture : listeVoiture){
+		xml << voiture.exporter();
+	}
+	xml << "</listeVoitures></longue>";
+	return xml.str();
+}
 } /* namespace std */
