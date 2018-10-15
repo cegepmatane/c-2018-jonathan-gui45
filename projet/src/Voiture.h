@@ -15,6 +15,7 @@ public:
 	Voiture();
 	virtual ~Voiture();
 	virtual string exporter();
+	virtual void setNom(string nom);
 	int vitesse;
 	string nom;
 };

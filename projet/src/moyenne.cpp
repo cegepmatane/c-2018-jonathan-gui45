@@ -9,10 +9,34 @@
 #include "Sedan.h"
 #include "Sport.h"
 #include "sstream"
+#include "fstream"
 namespace std {
 
 moyenne::moyenne() {
+	ifstream sourcePersonnage;
+	    sourcePersonnage.open("data/voitures.csv");
+	    string ligne;
+	    string temp;
+	    list<string> listeNom;
+	    while(!sourcePersonnage.eof()){
+	        getline(sourcePersonnage,ligne);
+	        unsigned int positionDebut = 0;
+	        unsigned int positionFin = 0;
+	        do{
+	            positionFin = ligne.find(";", positionDebut);
+	            listeNom.push_back(ligne.substr(positionDebut, positionFin - positionDebut));
+	            temp = ligne.substr(positionDebut, positionFin - positionDebut);
+	            //cout << "pos fin "<< positionFin << endl;
+	            //cout << "valeur " << valeur << endl;
+	            positionDebut = positionFin+1;
+	        }while(positionDebut != 0);
+	    }
+
+	list<string>::iterator iterateur = listeNom.begin();
+	advance(iterateur, 1);
+	listeNom.pop_front();
 	Sedan sedan;
+	sedan.setNom(temp);
 	listeVoiture.assign(3, sedan);
 	nom = "moyenne";
 }

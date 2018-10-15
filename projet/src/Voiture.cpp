@@ -23,4 +23,7 @@ string Voiture::exporter(){
 	xml << "<vitesse>" << vitesse << "</vitesse></voiture>";
 	return xml.str();
 }
+void Voiture::setNom(string nom){
+this->nom = nom;
+}
 } /* namespace std */
