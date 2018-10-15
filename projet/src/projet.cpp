@@ -11,16 +11,19 @@
 #include "longue.h"
 #include "moyenne.h"
 #include "Sedan.h"
+#include <fstream>
 using namespace std;
 
 int main() {
 	cout << "!!!Hello World!!!" << endl;
-	courte piste1;
-	moyenne piste2;
+	courte* piste1 = new courte();
+	moyenne* piste2 = new moyenne();
 	longue* piste3 = new longue();
 	Sedan* voiture = new Sedan();
-	cout << voiture->exporter()<<endl;
-	cout << piste3->exporter()<<endl;
+	ofstream fichier;
+	fichier.open("data/courses.xml");
+	fichier <<piste1->exporter()<<piste2->exporter()<<piste3->exporter();
+	fichier.close();
 	delete voiture;
 	return 0;
 }

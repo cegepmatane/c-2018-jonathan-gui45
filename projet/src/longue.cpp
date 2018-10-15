@@ -15,8 +15,9 @@ longue::longue() {
 	longueur = 1000;
 	Sedan sedan;
 	Sport sport;
-	listeVoiture.assign(2, sedan);
-	listeVoiture.assign(1, sport);
+	listeVoiture.push_back( sedan);
+	listeVoiture.push_back( sedan);
+	listeVoiture.push_back( sport);
 	nom = "longue";
 }
 

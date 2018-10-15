@@ -20,7 +20,7 @@ Voiture::~Voiture() {
 string Voiture::exporter(){
 	stringstream xml;
 	xml << "<voiture><nom>" << nom << "</nom>";
-	xml << "<vitesse>" << vitesse << "</vitesse>";
+	xml << "<vitesse>" << vitesse << "</vitesse></voiture>";
 	return xml.str();
 }
 } /* namespace std */
