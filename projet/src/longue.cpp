@@ -31,13 +31,18 @@ longue::longue() {
 	            positionDebut = positionFin+1;
 	        }while(positionDebut != 0);
 	    }
-	list<string>::iterator iterateur = listeNom.begin();
-	advance(iterateur, 1);
-	listeNom.pop_front();
-	longueur = 1000;
+	longueur = 1500;
 	Sedan* sedan = new Sedan();
 	Sedan* sedan1 = new Sedan();
 	Sport* sport = new Sport();
+
+	list<string>::iterator iterateur = listeNom.begin();
+	sedan1->setNom(*iterateur);
+	iterateur++;
+	sedan->setNom(*iterateur);
+	iterateur++;
+	sport->setNom(*iterateur);
+
 	listeVoiture.push_back(sedan);
 	listeVoiture.push_back(sedan1);
 	listeVoiture.push_back(sport);

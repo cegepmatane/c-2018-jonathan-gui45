@@ -30,18 +30,22 @@ courte::courte() {
 	            positionDebut = positionFin+1;
 	        }while(positionDebut != 0);
 	    }
-
-	Familiale familliale;
-	list<string>::iterator iterateur = listeNom.begin();
-	advance(iterateur, 1);
-	listeNom.pop_front();
 	Familiale* familiale = new Familiale();
 	Familiale* familiale1 = new Familiale();
 	Familiale* familiale2 = new Familiale();
+
+	list<string>::iterator iterateur = listeNom.begin();
+	familiale->setNom(*iterateur);
+	iterateur++;
+	familiale1->setNom(*iterateur);
+	iterateur++;
+	familiale2->setNom(*iterateur);
+
 	listeVoiture.push_back(familiale);
 	listeVoiture.push_back(familiale1);
 	listeVoiture.push_back(familiale2);
 	nom = "courte";
+	longueur = 500;
 }
 
 
