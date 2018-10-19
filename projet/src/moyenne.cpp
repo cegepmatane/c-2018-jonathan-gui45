@@ -35,9 +35,12 @@ moyenne::moyenne() {
 	list<string>::iterator iterateur = listeNom.begin();
 	advance(iterateur, 1);
 	listeNom.pop_front();
-	Sedan sedan;
-	sedan.setNom(temp);
-	listeVoiture.assign(3, sedan);
+	Sedan* sedan = new Sedan();
+	Sedan* sedan1 = new Sedan();
+	Sedan* sedan2 = new Sedan();
+	listeVoiture.push_back(*sedan);
+	listeVoiture.push_back(*sedan1);
+	listeVoiture.push_back(*sedan2);
 	nom = "moyenne";
 }
 

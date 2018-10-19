@@ -35,8 +35,12 @@ courte::courte() {
 	list<string>::iterator iterateur = listeNom.begin();
 	advance(iterateur, 1);
 	listeNom.pop_front();
-	familliale.setNom(temp);
-	listeVoiture.assign(3, familliale);
+	Familiale* familiale = new Familiale();
+	Familiale* familiale1 = new Familiale();
+	Familiale* familiale2 = new Familiale();
+	listeVoiture.push_back(*familiale);
+	listeVoiture.push_back(*familiale1);
+	listeVoiture.push_back(*familiale2);
 	nom = "courte";
 }
 

@@ -35,13 +35,12 @@ longue::longue() {
 	advance(iterateur, 1);
 	listeNom.pop_front();
 	longueur = 1000;
-	Sedan sedan;
-	Sport sport;
-	sedan.setNom(temp);
-	sport.setNom(temp);
-	listeVoiture.push_back( sedan);
-	listeVoiture.push_back( sedan);
-	listeVoiture.push_back( sport);
+	Sedan* sedan = new Sedan();
+	Sedan* sedan1 = new Sedan();
+	Sport* sport = new Sport();
+	listeVoiture.push_back(*sedan);
+	listeVoiture.push_back(*sedan1);
+	listeVoiture.push_back(*sport);
 	nom = "longue";
 }
 

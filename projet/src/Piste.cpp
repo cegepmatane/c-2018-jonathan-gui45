@@ -13,8 +13,12 @@ namespace std {
 Piste::Piste() {
 	longueur = 100;
 	nom = "piste";
-	Sedan sedan;
-	listeVoiture.assign(3, sedan);
+	Sedan* sedan = new Sedan();
+	Sedan* sedan1 = new Sedan();
+	Sedan* sedan2 = new Sedan();
+	listeVoiture.push_back(*sedan);
+	listeVoiture.push_back(*sedan1);
+	listeVoiture.push_back(*sedan2);
 }
 
 Piste::~Piste() {
