@@ -38,9 +38,9 @@ longue::longue() {
 	Sedan* sedan = new Sedan();
 	Sedan* sedan1 = new Sedan();
 	Sport* sport = new Sport();
-	listeVoiture.push_back(*sedan);
-	listeVoiture.push_back(*sedan1);
-	listeVoiture.push_back(*sport);
+	listeVoiture.push_back(sedan);
+	listeVoiture.push_back(sedan1);
+	listeVoiture.push_back(sport);
 	nom = "longue";
 }
 
@@ -52,8 +52,8 @@ string longue::exporter(){
 	xml << "<longue><nom>" << nom << "</nom>";
 	xml << "<longueur>" << longueur << "</longueur>";
 	xml << "<listeVoitures>";
-	for(Voiture voiture : listeVoiture){
-		xml << voiture.exporter();
+	for(Voiture *voiture : listeVoiture){
+		xml << voiture->exporter();
 	}
 	xml << "</listeVoitures></longue>";
 	return xml.str();

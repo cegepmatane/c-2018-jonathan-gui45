@@ -17,7 +17,7 @@ public:
 	Piste();
 	virtual ~Piste();
 	int longueur;
-	list<Voiture> listeVoiture;
+	list<Voiture*> listeVoiture;
 	string nom;
 	virtual string exporter();
 };

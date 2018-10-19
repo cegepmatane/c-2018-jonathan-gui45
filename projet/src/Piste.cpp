@@ -16,9 +16,9 @@ Piste::Piste() {
 	Sedan* sedan = new Sedan();
 	Sedan* sedan1 = new Sedan();
 	Sedan* sedan2 = new Sedan();
-	listeVoiture.push_back(*sedan);
-	listeVoiture.push_back(*sedan1);
-	listeVoiture.push_back(*sedan2);
+	listeVoiture.push_back(sedan);
+	listeVoiture.push_back(sedan1);
+	listeVoiture.push_back(sedan2);
 }
 
 Piste::~Piste() {
@@ -29,8 +29,8 @@ string Piste::exporter(){
 	xml << "<piste><nom>" << nom << "</nom>";
 	xml << "<longueur>" << longueur << "</longueur>";
 	xml << "<listeVoitures>";
-	for(Voiture voiture : listeVoiture){
-		xml << voiture.exporter();
+	for(Voiture *voiture : listeVoiture){
+		xml << voiture->exporter();
 	}
 	xml << "</listeVoitures></piste>";
 	return xml.str();

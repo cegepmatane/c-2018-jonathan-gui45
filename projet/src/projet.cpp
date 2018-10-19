@@ -19,11 +19,9 @@ int main() {
 	courte* piste1 = new courte();
 	moyenne* piste2 = new moyenne();
 	longue* piste3 = new longue();
-	Sedan* voiture = new Sedan();
 	ofstream fichier;
 	fichier.open("data/courses.xml");
 	fichier <<piste1->exporter()<<piste2->exporter()<<piste3->exporter();
 	fichier.close();
-	delete voiture;
 	return 0;
 }

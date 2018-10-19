@@ -38,9 +38,9 @@ courte::courte() {
 	Familiale* familiale = new Familiale();
 	Familiale* familiale1 = new Familiale();
 	Familiale* familiale2 = new Familiale();
-	listeVoiture.push_back(*familiale);
-	listeVoiture.push_back(*familiale1);
-	listeVoiture.push_back(*familiale2);
+	listeVoiture.push_back(familiale);
+	listeVoiture.push_back(familiale1);
+	listeVoiture.push_back(familiale2);
 	nom = "courte";
 }
 
@@ -53,8 +53,8 @@ courte::~courte() {
 		xml << "<courte><nom>" << nom << "</nom>";
 		xml << "<longueur>" << longueur << "</longueur>";
 		xml << "<listeVoitures>";
-		for(Voiture voiture : listeVoiture){
-			xml << voiture.exporter();
+		for(Voiture *voiture : listeVoiture){
+			xml << voiture->exporter();
 		}
 		xml << "</listeVoitures></courte>";
 		return xml.str();

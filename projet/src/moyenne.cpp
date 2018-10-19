@@ -38,9 +38,9 @@ moyenne::moyenne() {
 	Sedan* sedan = new Sedan();
 	Sedan* sedan1 = new Sedan();
 	Sedan* sedan2 = new Sedan();
-	listeVoiture.push_back(*sedan);
-	listeVoiture.push_back(*sedan1);
-	listeVoiture.push_back(*sedan2);
+	listeVoiture.push_back(sedan);
+	listeVoiture.push_back(sedan1);
+	listeVoiture.push_back(sedan2);
 	nom = "moyenne";
 }
 
@@ -52,8 +52,8 @@ string moyenne::exporter(){
 	xml << "<moyenne><nom>" << nom << "</nom>";
 	xml << "<longueur>" << longueur << "</longueur>";
 	xml << "<listeVoitures>";
-	for(Voiture voiture : listeVoiture){
-		xml << voiture.exporter();
+	for(Voiture *voiture : listeVoiture){
+		xml << voiture->exporter();
 	}
 	xml << "</listeVoitures></moyenne>";
 	return xml.str();
