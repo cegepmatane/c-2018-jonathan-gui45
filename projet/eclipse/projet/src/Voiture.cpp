@@ -30,7 +30,10 @@ void Voiture::reculer() {
 	int vitesseReculon = vitesse / 2;
 	distanceParcourue -= vitesseReculon;
 }
-
+void Voiture::operator++() {
+	vitesse += 50 ;
+	distanceParcourue = 0;
+}
 Voiture::~Voiture() {
 	// TODO Auto-generated destructor stub
 }

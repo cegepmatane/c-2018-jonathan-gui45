@@ -55,7 +55,7 @@ int main() {
 	bool victoire = false;
 	while (!quitter) {
 		system("cls");
-		cout << "'q' pour quitter, 'd' pour avancer, 'a' pour reculer,'s' pour faire reculer tous sauf toi, 'n' pour beneficier de vitesse suplementaire"<<endl;
+		cout << "'q' pour quitter, 'd' pour avancer, 'a' pour reculer,'s' pour faire reculer tous sauf toi, 'n' pour beneficier de vitesse suplementaire, 'w' pour suavegarder la partie en cour"<<endl;
 		piste->afficher();
 		char commande = 'd';
 		cin >> commande;

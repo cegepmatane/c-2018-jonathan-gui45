@@ -21,6 +21,7 @@ public:
 	virtual void afficher();
 	virtual void nitro();
 	virtual int getDistanceParcourue();
+	virtual void operator++();
 	int distanceParcourue;
 	int vitesse;
 	string nom;
