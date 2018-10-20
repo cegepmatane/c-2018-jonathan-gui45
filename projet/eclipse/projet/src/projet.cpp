@@ -21,10 +21,7 @@ int main() {
 	moyenne* moyennePiste = new moyenne();
 	longue* longuePiste = new longue();
 
-	ofstream fichier;
-	fichier.open("data/courses.xml");
-	fichier << courtePiste->exporter()<< moyennePiste->exporter()<< longuePiste->exporter();
-	fichier.close();
+	
 
 	cout << "veuiller choisir une piste, courte[1], moyenne[2], longue[3]"<<endl;
 	Piste* piste;
@@ -104,6 +101,12 @@ int main() {
 					(*iterateur)->avancer();
 				i++;
 			}
+			break;
+		case 'w':
+			ofstream fichier;
+			fichier.open("data/courses.xml");
+			fichier << piste->exporter();
+			fichier.close();
 			break;
 		}
 		i = 1;

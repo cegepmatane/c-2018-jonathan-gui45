@@ -25,6 +25,7 @@ string Sport::exporter(){
 	stringstream xml;
 	xml << "<sport><nom>" << nom << "</nom>";
 	xml << "<vitesse>" << vitesse << "</sport>";
+	xml << "<distance>" << distanceParcourue << "</distance>";
 	return xml.str();
 }
 } /* namespace std */

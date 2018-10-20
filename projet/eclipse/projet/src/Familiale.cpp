@@ -25,6 +25,7 @@ string Familiale::exporter(){
 	stringstream xml;
 	xml << "<familiale><nom>" << nom << "</nom>";
 	xml << "<vitesse>" << vitesse << "</familiale>";
+	xml << "<distance>" << distanceParcourue << "</distance>";
 	return xml.str();
 }
 } /* namespace std */

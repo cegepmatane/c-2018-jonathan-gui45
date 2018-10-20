@@ -25,6 +25,7 @@ string Sedan::exporter(){
 	stringstream xml;
 	xml << "<sedan><nom>" << nom << "</nom>";
 	xml << "<vitesse>" << vitesse << "</sedan>";
+	xml << "<distance>" << distanceParcourue << "</distance>";
 	return xml.str();
 }
 } /* namespace std */
