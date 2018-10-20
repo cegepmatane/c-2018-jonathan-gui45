@@ -7,13 +7,17 @@
 
 #include "Sedan.h"
 #include "sstream"
+#include "iostream"
 namespace std {
 
 Sedan::Sedan() {
+	distanceParcourue = 0;
 	vitesse = 120;
 	nom = "sedan";
 }
-
+void Sedan::afficher() {
+	cout << nom << "(sedan), distance :" << distanceParcourue << endl;
+}
 Sedan::~Sedan() {
 	// TODO Auto-generated destructor stub
 }

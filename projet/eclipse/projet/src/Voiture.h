@@ -16,6 +16,11 @@ public:
 	virtual ~Voiture();
 	virtual string exporter();
 	virtual void setNom(string nom);
+	virtual void avancer();
+	virtual void reculer();
+	virtual void afficher();
+	virtual int getDistanceParcourue();
+	int distanceParcourue;
 	int vitesse;
 	string nom;
 };

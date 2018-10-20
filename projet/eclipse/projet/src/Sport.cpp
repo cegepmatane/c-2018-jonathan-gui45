@@ -7,13 +7,17 @@
 
 #include "Sport.h"
 #include "sstream"
+#include "iostream"
 namespace std {
 
 Sport::Sport() {
+	distanceParcourue = 0;
 	vitesse = 250;
 	nom = "sport";
 }
-
+void Sport::afficher() {
+	cout << nom << "(sport), distance :" << distanceParcourue << endl;
+}
 Sport::~Sport() {
 	// TODO Auto-generated destructor stub
 }

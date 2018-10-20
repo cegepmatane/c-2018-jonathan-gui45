@@ -15,8 +15,10 @@ public:
 	Sport();
 	virtual ~Sport();
 	string exporter();
+	void afficher();
 };
 
 } /* namespace std */
 
 #endif /* SPORT_H_ */
+

@@ -7,13 +7,17 @@
 
 #include "Familiale.h"
 #include "sstream"
+#include "iostream"
 namespace std {
 
 Familiale::Familiale() {
+	distanceParcourue = 0;
 	vitesse = 60;
 	nom = "familiale";
 }
-
+void Familiale::afficher() {
+	cout << nom << "(famillliale), distance :" << distanceParcourue << endl;
+}
 Familiale::~Familiale() {
 	// TODO Auto-generated destructor stub
 }

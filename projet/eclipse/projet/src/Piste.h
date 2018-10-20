@@ -16,10 +16,12 @@ class Piste {
 public:
 	Piste();
 	virtual ~Piste();
+	virtual string exporter();
+	virtual void afficher();
+	virtual int getLongueur();
 	int longueur;
 	list<Voiture*> listeVoiture;
 	string nom;
-	virtual string exporter();
 };
 
 } /* namespace std */

@@ -29,4 +29,14 @@ string Piste::exporter(){
 	xml << "</listeVoitures></piste>";
 	return xml.str();
 }
+void Piste::afficher() {
+	list<Voiture*>::iterator iterateur;
+	for (iterateur = listeVoiture.begin(); iterateur != listeVoiture.end(); ++iterateur) {
+		(*iterateur)->afficher();
+	}
+	cout << nom << ": distance total a parcourir : " << longueur << endl;
+}
+int Piste::getLongueur() {
+	return longueur;
+}
 } /* namespace std */

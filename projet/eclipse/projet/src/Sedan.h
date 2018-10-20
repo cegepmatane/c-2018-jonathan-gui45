@@ -15,6 +15,7 @@ public:
 	Sedan();
 	virtual ~Sedan();
 	string exporter();
+	void afficher();
 };
 
 } /* namespace std */
