@@ -43,8 +43,8 @@ longue::longue() {
 	iterateur++;
 	sport->setNom(*iterateur);
 
-	listeVoiture.push_back(sedan);
 	listeVoiture.push_back(sedan1);
+	listeVoiture.push_back(sedan);
 	listeVoiture.push_back(sport);
 	nom = "longue";
 }

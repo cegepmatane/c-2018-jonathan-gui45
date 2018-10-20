@@ -19,6 +19,7 @@ public:
 	virtual string exporter();
 	virtual void afficher();
 	virtual int getLongueur();
+	virtual list<Voiture*> getListeVoiture();
 	int longueur;
 	list<Voiture*> listeVoiture;
 	string nom;

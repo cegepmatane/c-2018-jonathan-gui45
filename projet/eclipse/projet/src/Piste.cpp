@@ -29,6 +29,9 @@ string Piste::exporter(){
 	xml << "</listeVoitures></piste>";
 	return xml.str();
 }
+list<Voiture*> Piste::getListeVoiture() {
+	return listeVoiture;
+}
 void Piste::afficher() {
 	list<Voiture*>::iterator iterateur;
 	for (iterateur = listeVoiture.begin(); iterateur != listeVoiture.end(); ++iterateur) {

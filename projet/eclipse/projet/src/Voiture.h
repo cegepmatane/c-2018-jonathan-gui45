@@ -19,6 +19,7 @@ public:
 	virtual void avancer();
 	virtual void reculer();
 	virtual void afficher();
+	virtual void nitro();
 	virtual int getDistanceParcourue();
 	int distanceParcourue;
 	int vitesse;

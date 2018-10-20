@@ -19,7 +19,9 @@ Voiture::Voiture() {
 void Voiture::afficher() {
 	cout << nom << "(), distance :" << distanceParcourue << endl;
 }
-
+void Voiture::nitro() {
+	distanceParcourue += vitesse * 2;
+}
 void Voiture::avancer() {
 	distanceParcourue += vitesse;
 }
