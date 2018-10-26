@@ -19,14 +19,10 @@
 using namespace std;
 
 int main() {
-	sf::RenderWindow window(sf::VideoMode(800, 500), "SFML works!");
-	sf::CircleShape shape(100.f);
-	sf::Sprite sprite;
-	shape.setFillColor(sf::Color::Green);
-	sf::Texture image;
-	image.loadFromFile("images/6362.png");
-	sprite.setTexture(image);
-	shape.setPosition(200, 200);
+	sf::RenderWindow window(sf::VideoMode(1200, 700), "SFML works!");
+	sf::Texture tBackground;
+	tBackground.loadFromFile("images/background.png");
+	sf::Sprite sBackgroung(tBackground);
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -37,8 +33,7 @@ int main() {
 		}
 
 		window.clear();
-		window.draw(shape);
-		window.draw(sprite);
+		window.draw(sBackgroung);
 		window.display();
 
 		courte* courtePiste = new courte();
