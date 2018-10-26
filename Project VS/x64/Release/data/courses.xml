@@ -1,0 +1,1 @@
+<longue><nom>longue</nom><longueur>1500</longueur><listeVoitures><sedan><nom>voiture1</nom><vitesse>120</sedan><distance>240</distance><sedan><nom>voiture2</nom><vitesse>120</sedan><distance>780</distance><sport><nom>voiture3</nom><vitesse>250</sport><distance>500</distance></listeVoitures></longue>
