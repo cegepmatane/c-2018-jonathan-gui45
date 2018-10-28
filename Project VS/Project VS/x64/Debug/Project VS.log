@@ -1,0 +1,14 @@
+﻿  courte.cpp
+c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\courte.cpp(25): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Familiale.cpp
+  longue.cpp
+c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\longue.cpp(26): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  moyenne.cpp
+c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\moyenne.cpp(26): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Piste.cpp
+  projet.cpp
+  Sedan.cpp
+  Sport.cpp
+  Voiture.cpp
+  Generating Code...
+  Project VS.vcxproj -> C:\Users\gui\Desktop\things\gitAU2018\c-2018-jonathan-gui45\Project VS\x64\Debug\Project VS.exe

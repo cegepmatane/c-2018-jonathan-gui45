@@ -19,10 +19,57 @@
 using namespace std;
 
 int main() {
-	sf::RenderWindow window(sf::VideoMode(1200, 700), "SFML works!");
+	sf::RenderWindow window(sf::VideoMode(1200, 700), "race");
 	sf::Texture tBackground;
 	tBackground.loadFromFile("images/background.png");
 	sf::Sprite sBackgroung(tBackground);
+
+	courte* courtePiste = new courte();
+	moyenne* moyennePiste = new moyenne();
+	longue* longuePiste = new longue();
+
+
+
+	//cout << "veuiller choisir une piste, courte[1], moyenne[2], longue[3]" << endl;
+	sf::Font font;
+	font.loadFromFile("fonts/arial.ttf");
+	sf::Text Toptions1("veuiller choisir une piste, courte[1], moyenne[2], longue[3]", font, 30);
+	Toptions1.move(0, 300);
+	Toptions1.setFillColor(sf::Color::Black);
+	window.clear();
+	window.draw(sBackgroung);
+	window.draw(Toptions1);
+	window.display();
+
+	Piste* piste;
+	int choix;
+	cin >> choix;
+	switch (choix) {
+	case 1:
+		piste = courtePiste;
+		break;
+	case 2:
+		piste = moyennePiste;
+		break;
+	case 3:
+		piste = longuePiste;
+		break;
+	default:
+		piste = moyennePiste;
+		break;
+	}
+	system("cls");
+	piste->afficher();
+	cout << "veuiller choisir votre voiture avec un nombre entre 1 et 3" << endl;
+	int voiture = 1;
+	cin >> voiture;
+	if (voiture > 3 || voiture < 1) voiture = 1;
+
+	list<Voiture*> liste = piste->getListeVoiture();
+	list<Voiture*>::iterator iterateur = liste.begin();
+
+	bool quitter = false;
+	bool victoire = false;
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -31,54 +78,14 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-
-		window.clear();
-		window.draw(sBackgroung);
-		window.display();
-
-		courte* courtePiste = new courte();
-		moyenne* moyennePiste = new moyenne();
-		longue* longuePiste = new longue();
-
-
-
-		cout << "veuiller choisir une piste, courte[1], moyenne[2], longue[3]" << endl;
-		Piste* piste;
-		int choix;
-		cin >> choix;
-		switch (choix) {
-		case 1:
-			piste = courtePiste;
-			break;
-		case 2:
-			piste = moyennePiste;
-			break;
-		case 3:
-			piste = longuePiste;
-			break;
-		default:
-			piste = moyennePiste;
-			break;
-		}
-		system("cls");
-		piste->afficher();
-		cout << "veuiller choisir votre voiture avec un nombre entre 1 et 3" << endl;
-		int voiture = 1;
-		cin >> voiture;
-		if (voiture > 3 || voiture < 1) voiture = 1;
-
-		list<Voiture*> liste = piste->getListeVoiture();
-		list<Voiture*>::iterator iterateur = liste.begin();
-
-		bool quitter = false;
-		bool victoire = false;
-		while (!quitter) {
+		//while (!quitter) {
 			system("cls");
-			cout << "'q' pour quitter, 'd' pour avancer, 'a' pour reculer,'s' pour faire reculer tous sauf toi, 'n' pour beneficier de vitesse suplementaire, 'w' pour suavegarder la partie en cour" << endl;
+			cout << "'q' pour quitter, 'd' pour avancer, 'a' pour reculer,'s' pour faire reculer tous sauf toi, 'n' pour beneficier de vitesse suplementaire, 'w' pour suavegarder la partie en cour, ' ' pour changer de voiture" << endl;
 			piste->afficher();
 			char commande = 'd';
 			cin >> commande;
 			int i = 1;
+			ofstream fichier;
 			switch (commande) {
 			case 'q':
 				quitter = true;
@@ -122,12 +129,17 @@ int main() {
 				}
 				break;
 			case 'w':
-				ofstream fichier;
 				fichier.open("data/courses.xml");
 				fichier << piste->exporter();
 				fichier.close();
 				break;
+			case ' ':
+				voiture++;
+				if (voiture > 3) voiture = 1;
+				break;
 			}
+			
+
 			i = 1;
 			for (iterateur = liste.begin(); iterateur != liste.end(); iterateur++) {
 				if ((*iterateur)->getDistanceParcourue() >= piste->getLongueur()) {
@@ -138,7 +150,7 @@ int main() {
 				}
 				i++;
 			}
-		}
+		//}
 		system("cls");
 		if (victoire)
 			cout << "Felicitation!!! tu a gagner";
