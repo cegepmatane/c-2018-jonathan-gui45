@@ -59,8 +59,17 @@ int main() {
 		break;
 	}
 	system("cls");
-	piste->afficher();
-	cout << "veuiller choisir votre voiture avec un nombre entre 1 et 3" << endl;
+	//piste->afficher();
+	//cout << "veuiller choisir votre voiture avec un nombre entre 1 et 3" << endl;
+
+	sf::Text Toptions2(piste->afficher() + "\nveuiller choisir votre voiture avec un nombre entre 1 et 3", font, 30);
+	Toptions2.move(0, 300);
+	Toptions2.setFillColor(sf::Color::Black);
+	window.clear();
+	window.draw(sBackgroung);
+	window.draw(Toptions2);
+	window.display();
+
 	int voiture = 1;
 	cin >> voiture;
 	if (voiture > 3 || voiture < 1) voiture = 1;
@@ -81,7 +90,7 @@ int main() {
 		//while (!quitter) {
 			system("cls");
 			cout << "'q' pour quitter, 'd' pour avancer, 'a' pour reculer,'s' pour faire reculer tous sauf toi, 'n' pour beneficier de vitesse suplementaire, 'w' pour suavegarder la partie en cour, ' ' pour changer de voiture" << endl;
-			piste->afficher();
+			//piste->afficher();
 			char commande = 'd';
 			cin >> commande;
 			int i = 1;

@@ -15,8 +15,13 @@ Sedan::Sedan() {
 	vitesse = 120;
 	nom = "sedan";
 }
-void Sedan::afficher() {
-	cout << nom << "(sedan), distance :" << distanceParcourue << endl;
+string Sedan::afficher(sf::Window window) {
+	//cout << nom << "(sedan), distance :" << distanceParcourue << endl;
+	sf::Texture texture;
+	texture.loadFromFile("images/sedan.png");
+	string text = nom + "(sedan), distance :" + to_string(distanceParcourue);
+	cout << text << endl;
+	return text;
 }
 Sedan::~Sedan() {
 	// TODO Auto-generated destructor stub

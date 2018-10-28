@@ -10,6 +10,7 @@
 #include<iostream>
 #include<list>
 #include"Voiture.h"
+#include <SFML/Graphics.hpp>
 namespace std {
 
 class Piste {
@@ -17,7 +18,7 @@ public:
 	Piste();
 	virtual ~Piste();
 	virtual string exporter();
-	virtual void afficher();
+	virtual string afficher(sf::Window window);
 	virtual int getLongueur();
 	virtual list<Voiture*> getListeVoiture();
 	int longueur;

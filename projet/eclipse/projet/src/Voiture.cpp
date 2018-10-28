@@ -8,6 +8,7 @@
 #include "Voiture.h"
 #include "sstream"
 #include "iostream"
+#include <SFML/Graphics.hpp>
 namespace std {
 
 Voiture::Voiture() {
@@ -16,8 +17,11 @@ Voiture::Voiture() {
 	nom = "voiture";
 }
 
-void Voiture::afficher() {
-	cout << nom << "(), distance :" << distanceParcourue << endl;
+string Voiture::afficher(sf::Window window) {
+	int distancepx = (1200 * 100) / distanceParcourue;
+	string text = nom + "(), distance :" + to_string(distanceParcourue);
+	cout << text << endl;
+	return text;
 }
 void Voiture::nitro() {
 	distanceParcourue += vitesse * 2;

@@ -15,7 +15,7 @@ public:
 	Familiale();
 	virtual ~Familiale();
 	string exporter();
-	void afficher();
+	string afficher();
 };
 
 } /* namespace std */

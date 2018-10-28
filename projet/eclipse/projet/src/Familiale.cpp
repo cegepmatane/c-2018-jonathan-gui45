@@ -15,8 +15,11 @@ Familiale::Familiale() {
 	vitesse = 60;
 	nom = "familiale";
 }
-void Familiale::afficher() {
-	cout << nom << "(famillliale), distance :" << distanceParcourue << endl;
+string Familiale::afficher() {
+	//cout << nom << "(famillliale), distance :" << distanceParcourue << endl;
+	string text = nom + "(famillliale), distance :" + to_string(distanceParcourue);
+	cout << text << endl;
+	return text;
 }
 Familiale::~Familiale() {
 	// TODO Auto-generated destructor stub

@@ -1,7 +1,14 @@
-﻿  projet.cpp
-  Generating code
-  1 of 433 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Project VS.vcxproj -> C:\Users\gui\Desktop\things\gitAU2018\c-2018-jonathan-gui45\Project VS\x64\Release\Project VS.exe
+﻿  Familiale.cpp
+  Piste.cpp
+c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\piste.cpp(39): error C2660: 'std::Voiture::afficher': function does not take 0 arguments
+  c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\voiture.h(22): note: see declaration of 'std::Voiture::afficher'
+  Sedan.cpp
+  Sport.cpp
+  Voiture.cpp
+  courte.cpp
+c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\courte.cpp(25): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  longue.cpp
+c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\longue.cpp(26): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  moyenne.cpp
+c:\users\gui\desktop\things\gitau2018\c-2018-jonathan-gui45\projet\eclipse\projet\src\moyenne.cpp(26): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  projet.cpp

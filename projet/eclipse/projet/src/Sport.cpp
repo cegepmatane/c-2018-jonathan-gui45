@@ -15,8 +15,11 @@ Sport::Sport() {
 	vitesse = 250;
 	nom = "sport";
 }
-void Sport::afficher() {
-	cout << nom << "(sport), distance :" << distanceParcourue << endl;
+string Sport::afficher() {
+	//cout << nom << "(sport), distance :" << distanceParcourue << endl;
+	string text = nom + "(sport), distance :" + to_string(distanceParcourue);
+	cout << text << endl;
+	return text;
 }
 Sport::~Sport() {
 	// TODO Auto-generated destructor stub
