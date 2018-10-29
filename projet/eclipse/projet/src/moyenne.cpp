@@ -44,6 +44,10 @@ moyenne::moyenne() {
 	iterateur++;
 	sedan2->setNom(*iterateur);
 
+	sedan->setPosition(0);
+	sedan1->setPosition(100);
+	sedan2->setPosition(200);
+
 	listeVoiture.push_back(sedan);
 	listeVoiture.push_back(sedan1);
 	listeVoiture.push_back(sedan2);

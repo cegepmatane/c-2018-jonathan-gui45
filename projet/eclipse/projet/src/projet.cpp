@@ -61,15 +61,21 @@ int main() {
 	system("cls");
 	//piste->afficher();
 	//cout << "veuiller choisir votre voiture avec un nombre entre 1 et 3" << endl;
-
+	list<sf::Sprite*> listeSpriteVoitures = piste->afficherImages();
 	sf::Text Toptions2(piste->afficher() + "\nveuiller choisir votre voiture avec un nombre entre 1 et 3", font, 30);
 	Toptions2.move(0, 300);
 	Toptions2.setFillColor(sf::Color::Black);
 	window.clear();
 	window.draw(sBackgroung);
 	window.draw(Toptions2);
+	for (list<sf::Sprite*>::iterator iterateur = listeSpriteVoitures.begin(); iterateur != listeSpriteVoitures.end(); iterateur++) {
+		window.draw(*(*iterateur));
+	}
 	window.display();
-
+	for (list<sf::Sprite*>::iterator iterateur = listeSpriteVoitures.begin(); iterateur != listeSpriteVoitures.end(); iterateur++) {
+		delete((*iterateur)->getTexture());
+		delete((*iterateur));
+	}
 	int voiture = 1;
 	cin >> voiture;
 	if (voiture > 3 || voiture < 1) voiture = 1;

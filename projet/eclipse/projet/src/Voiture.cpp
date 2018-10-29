@@ -17,12 +17,12 @@ Voiture::Voiture() {
 	nom = "voiture";
 	type = "voiture";
 }
-sf::Sprite Voiture::afficherImage() {
-	sf::Texture texture;
-	texture.loadFromFile("images/" + type + "Resize.png");
-	sf::Sprite sprite;
-	sprite.setTexture(texture);
-	sprite.move(0, position);
+sf::Sprite* Voiture::afficherImage() {
+	sf::Texture *texture = new sf::Texture();
+	texture->loadFromFile("images/" + type + "Resize.png");
+	sf::Sprite *sprite = new sf::Sprite();
+	sprite->setTexture(*texture);
+	sprite->move(0, position);
 	return sprite;
 }
 string Voiture::afficher() {

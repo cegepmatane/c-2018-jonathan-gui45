@@ -29,11 +29,12 @@ string Piste::exporter(){
 	xml << "</listeVoitures></piste>";
 	return xml.str();
 }
-list<Voiture*> Piste::getListeVoiture() {
-	return listeVoiture;
-}
-list<sf::Sprite> Piste::afficherImages() {
-	
+list<sf::Sprite*> Piste::afficherImages() {
+	list<sf::Sprite*> listeSVoitures;
+	for (list<Voiture*>::iterator iterateur = listeVoiture.begin(); iterateur != listeVoiture.end(); iterateur++) {
+		listeSVoitures.push_back((*iterateur)->afficherImage());
+	}
+	return listeSVoitures;
 }
 string Piste::afficher() {
 	list<Voiture*>::iterator iterateur;
@@ -48,5 +49,8 @@ string Piste::afficher() {
 }
 int Piste::getLongueur() {
 	return longueur;
+}
+list<Voiture*> Piste::getListeVoiture() {
+	return listeVoiture;
 }
 } /* namespace std */

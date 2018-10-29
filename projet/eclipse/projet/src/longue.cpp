@@ -43,6 +43,10 @@ longue::longue() {
 	iterateur++;
 	sport->setNom(*iterateur);
 
+	sedan1->setPosition(0);
+	sedan->setPosition(100);
+	sport->setPosition(200);
+
 	listeVoiture.push_back(sedan1);
 	listeVoiture.push_back(sedan);
 	listeVoiture.push_back(sport);

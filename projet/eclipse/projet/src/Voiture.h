@@ -23,8 +23,7 @@ public:
 	virtual void nitro();
 	virtual int getDistanceParcourue();
 	virtual void operator++();
-	virtual void setPosition(int position);
-	virtual sf::Sprite afficherImage();
+	virtual sf::Sprite* afficherImage();
 	virtual void setPosition(float position);
 	float position;
 	int distanceParcourue;

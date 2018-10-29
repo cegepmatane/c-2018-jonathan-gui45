@@ -41,6 +41,10 @@ courte::courte() {
 	iterateur++;
 	familiale2->setNom(*iterateur);
 
+	familiale->setPosition(0);
+	familiale1->setPosition(100);
+	familiale2->setPosition(200);
+
 	listeVoiture.push_back(familiale);
 	listeVoiture.push_back(familiale1);
 	listeVoiture.push_back(familiale2);

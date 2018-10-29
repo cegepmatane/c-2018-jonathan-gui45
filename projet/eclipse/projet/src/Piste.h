@@ -21,7 +21,7 @@ public:
 	virtual string afficher();
 	virtual int getLongueur();
 	virtual list<Voiture*> getListeVoiture();
-	virtual list<sf::Sprite> afficherImages();
+	virtual list<sf::Sprite*> afficherImages();
 	int longueur;
 	list<Voiture*> listeVoiture;
 	string nom;
