@@ -32,11 +32,14 @@ string Piste::exporter(){
 list<Voiture*> Piste::getListeVoiture() {
 	return listeVoiture;
 }
-string Piste::afficher(sf::Window window) {
+list<sf::Sprite> Piste::afficherImages() {
+	
+}
+string Piste::afficher() {
 	list<Voiture*>::iterator iterateur;
 	string text = "";
 	for (iterateur = listeVoiture.begin(); iterateur != listeVoiture.end(); ++iterateur) {
-		text += (*iterateur)->afficher(window) + "\n";
+		text += (*iterateur)->afficher() + "\n";
 	}
 
 	text += nom + ": distance total a parcourir : " + to_string(longueur);

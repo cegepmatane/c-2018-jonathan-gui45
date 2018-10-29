@@ -15,9 +15,17 @@ Voiture::Voiture() {
 	distanceParcourue = 0;
 	vitesse = 100;
 	nom = "voiture";
+	type = "voiture";
 }
-
-string Voiture::afficher(sf::Window window) {
+sf::Sprite Voiture::afficherImage() {
+	sf::Texture texture;
+	texture.loadFromFile("images/" + type + "Resize.png");
+	sf::Sprite sprite;
+	sprite.setTexture(texture);
+	sprite.move(0, position);
+	return sprite;
+}
+string Voiture::afficher() {
 	int distancepx = (1200 * 100) / distanceParcourue;
 	string text = nom + "(), distance :" + to_string(distanceParcourue);
 	cout << text << endl;
@@ -47,6 +55,9 @@ string Voiture::exporter(){
 	xml << "<voiture><nom>" << nom << "</nom>";
 	xml << "<vitesse>" << vitesse << "</vitesse></voiture>";
 	return xml.str();
+}
+void Voiture::setPosition(float position) {
+	this->position = position;
 }
 int Voiture::getDistanceParcourue() {
 	return distanceParcourue;

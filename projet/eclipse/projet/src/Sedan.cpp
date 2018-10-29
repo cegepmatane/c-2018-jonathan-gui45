@@ -14,11 +14,10 @@ Sedan::Sedan() {
 	distanceParcourue = 0;
 	vitesse = 120;
 	nom = "sedan";
+	type = "sedan";
 }
-string Sedan::afficher(sf::Window window) {
+string Sedan::afficher() {
 	//cout << nom << "(sedan), distance :" << distanceParcourue << endl;
-	sf::Texture texture;
-	texture.loadFromFile("images/sedan.png");
 	string text = nom + "(sedan), distance :" + to_string(distanceParcourue);
 	cout << text << endl;
 	return text;

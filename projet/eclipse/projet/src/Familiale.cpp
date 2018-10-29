@@ -14,6 +14,7 @@ Familiale::Familiale() {
 	distanceParcourue = 0;
 	vitesse = 60;
 	nom = "familiale";
+	type = "familiale";
 }
 string Familiale::afficher() {
 	//cout << nom << "(famillliale), distance :" << distanceParcourue << endl;

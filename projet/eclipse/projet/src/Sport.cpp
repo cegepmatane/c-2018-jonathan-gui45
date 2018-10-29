@@ -14,6 +14,7 @@ Sport::Sport() {
 	distanceParcourue = 0;
 	vitesse = 250;
 	nom = "sport";
+	type = "sport";
 }
 string Sport::afficher() {
 	//cout << nom << "(sport), distance :" << distanceParcourue << endl;

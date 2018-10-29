@@ -19,14 +19,17 @@ public:
 	virtual void setNom(string nom);
 	virtual void avancer();
 	virtual void reculer();
-	virtual string afficher(sf::Window window);
+	virtual string afficher();
 	virtual void nitro();
 	virtual int getDistanceParcourue();
 	virtual void operator++();
 	virtual void setPosition(int position);
-	int position();
+	virtual sf::Sprite afficherImage();
+	virtual void setPosition(float position);
+	float position;
 	int distanceParcourue;
 	int vitesse;
+	string type;
 	string nom;
 };
 

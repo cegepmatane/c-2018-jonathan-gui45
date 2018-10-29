@@ -18,9 +18,10 @@ public:
 	Piste();
 	virtual ~Piste();
 	virtual string exporter();
-	virtual string afficher(sf::Window window);
+	virtual string afficher();
 	virtual int getLongueur();
 	virtual list<Voiture*> getListeVoiture();
+	virtual list<sf::Sprite> afficherImages();
 	int longueur;
 	list<Voiture*> listeVoiture;
 	string nom;
