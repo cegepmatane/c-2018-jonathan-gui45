@@ -25,9 +25,11 @@ public:
 	virtual void operator++();
 	virtual sf::Sprite* afficherImage();
 	virtual void setPosition(float position);
+	virtual void setLongueurPiste(int longeur);
 	float position;
 	int distanceParcourue;
 	int vitesse;
+	int longeurPiste;
 	string type;
 	string nom;
 };

@@ -19,7 +19,7 @@ Sedan::Sedan() {
 string Sedan::afficher() {
 	//cout << nom << "(sedan), distance :" << distanceParcourue << endl;
 	string text = nom + "(sedan), distance :" + to_string(distanceParcourue);
-	cout << text << endl;
+	//cout << text << endl;
 	return text;
 }
 Sedan::~Sedan() {

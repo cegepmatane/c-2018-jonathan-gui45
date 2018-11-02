@@ -13,6 +13,8 @@
 namespace std {
 
 longue::longue() {
+	longueur = 1500;
+	nom = "longue";
 	ifstream sourcePersonnage;
 	    sourcePersonnage.open("data/voitures.csv");
 	    string ligne;
@@ -31,7 +33,7 @@ longue::longue() {
 	            positionDebut = positionFin+1;
 	        }while(positionDebut != 0);
 	    }
-	longueur = 1500;
+	
 	Sedan* sedan = new Sedan();
 	Sedan* sedan1 = new Sedan();
 	Sport* sport = new Sport();
@@ -47,10 +49,13 @@ longue::longue() {
 	sedan->setPosition(100);
 	sport->setPosition(200);
 
+	sedan1->setLongueurPiste(longueur);
+	sport->setLongueurPiste(longueur);
+	sedan->setLongueurPiste(longueur);
+
 	listeVoiture.push_back(sedan1);
 	listeVoiture.push_back(sedan);
 	listeVoiture.push_back(sport);
-	nom = "longue";
 }
 
 longue::~longue() {

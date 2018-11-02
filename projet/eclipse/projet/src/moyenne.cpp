@@ -13,6 +13,8 @@
 namespace std {
 
 moyenne::moyenne() {
+	nom = "moyenne";
+	longueur = 1000;
 	ifstream sourcePersonnage;
 	    sourcePersonnage.open("data/voitures.csv");
 	    string ligne;
@@ -48,12 +50,13 @@ moyenne::moyenne() {
 	sedan1->setPosition(100);
 	sedan2->setPosition(200);
 
+	sedan->setLongueurPiste(longueur);
+	sedan1->setLongueurPiste(longueur);
+	sedan2->setLongueurPiste(longueur);
+
 	listeVoiture.push_back(sedan);
 	listeVoiture.push_back(sedan1);
 	listeVoiture.push_back(sedan2);
-	nom = "moyenne";
-	longueur = 1000;
-
 }
 
 moyenne::~moyenne() {

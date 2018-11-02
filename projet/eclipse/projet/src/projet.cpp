@@ -87,16 +87,27 @@ int main() {
 	bool victoire = false;
 	while (window.isOpen())
 	{
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				window.close();
-		}
 		//while (!quitter) {
 			system("cls");
 			cout << "'q' pour quitter, 'd' pour avancer, 'a' pour reculer,'s' pour faire reculer tous sauf toi, 'n' pour beneficier de vitesse suplementaire, 'w' pour suavegarder la partie en cour, ' ' pour changer de voiture" << endl;
 			//piste->afficher();
+
+			list<sf::Sprite*> listeSpriteVoitures = piste->afficherImages();
+			sf::Text Toptions2(piste->afficher() + "\n voiture selectionner : " + to_string(voiture) + "\n'q' pour quitter, 'd' pour avancer, 'a' pour reculer,\n's' pour faire reculer tous sauf toi, 'n' pour beneficier de vitesse suplementaire, \n'w' pour suavegarder la partie en cour, ' ' pour changer de voiture", font, 30);
+			Toptions2.move(0, 300);
+			Toptions2.setFillColor(sf::Color::Black);
+			window.clear();
+			window.draw(sBackgroung);
+			window.draw(Toptions2);
+			for (list<sf::Sprite*>::iterator iterateur = listeSpriteVoitures.begin(); iterateur != listeSpriteVoitures.end(); iterateur++) {
+				window.draw(*(*iterateur));
+			}
+			window.display();
+			for (list<sf::Sprite*>::iterator iterateur = listeSpriteVoitures.begin(); iterateur != listeSpriteVoitures.end(); iterateur++) {
+				delete((*iterateur)->getTexture());
+				delete((*iterateur));
+			}
+
 			char commande = 'd';
 			cin >> commande;
 			int i = 1;
@@ -158,7 +169,7 @@ int main() {
 			i = 1;
 			for (iterateur = liste.begin(); iterateur != liste.end(); iterateur++) {
 				if ((*iterateur)->getDistanceParcourue() >= piste->getLongueur()) {
-					quitter = true;
+					window.close();
 					if (i == voiture)
 						victoire = true;
 					break;
@@ -166,14 +177,13 @@ int main() {
 				i++;
 			}
 		//}
-		system("cls");
-		if (victoire)
-			cout << "Felicitation!!! tu a gagner";
-		else
-			cout << "haha ta perdu !";
-
-		_getch();
-
 	}
+	system("cls");
+	if (victoire)
+		cout << "Felicitation!!! tu a gagner";
+	else
+		cout << "haha ta perdu !";
+
+	_getch();
 	return 0;
 }

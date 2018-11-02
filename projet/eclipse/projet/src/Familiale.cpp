@@ -19,7 +19,7 @@ Familiale::Familiale() {
 string Familiale::afficher() {
 	//cout << nom << "(famillliale), distance :" << distanceParcourue << endl;
 	string text = nom + "(famillliale), distance :" + to_string(distanceParcourue);
-	cout << text << endl;
+	//cout << text << endl;
 	return text;
 }
 Familiale::~Familiale() {

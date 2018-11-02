@@ -12,6 +12,8 @@
 namespace std {
 
 courte::courte() {
+	nom = "courte";
+	longueur = 500;
 	ifstream sourcePersonnage;
 	    sourcePersonnage.open("data/voitures.csv");
 	    string ligne;
@@ -45,11 +47,13 @@ courte::courte() {
 	familiale1->setPosition(100);
 	familiale2->setPosition(200);
 
+	familiale->setLongueurPiste(longueur);
+	familiale1->setLongueurPiste(longueur);
+	familiale2->setLongueurPiste(longueur);
+
 	listeVoiture.push_back(familiale);
 	listeVoiture.push_back(familiale1);
 	listeVoiture.push_back(familiale2);
-	nom = "courte";
-	longueur = 500;
 }
 
 
